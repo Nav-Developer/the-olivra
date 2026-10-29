@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+:root {
+  /* existing vars stay... */
+  --wine-950: #1f070b;
+  --wine-900: #2e0d12;
+  --wine-800: #4a1820;
+  --wine-700: #6a1d22;
+  --wine-600: #7f2421; /* navbar maroon */
+  --gold-400: #e9c46a;
+  --copper: #c98b6b;
+  --cream-200: #f4e8d3;
+}
+
+@theme inline {
+  /* existing... */
+  --color-wine-950: var(--wine-950);
+  --color-wine-800: var(--wine-800);
+  --color-wine-600: var(--wine-600);
+  --color-gold-400: var(--gold-400);
+  --color-copper: var(--copper);
+  --color-cream-200: var(--cream-200);
+}
+
+/* html {
+  scroll-behavior: smooth;
+} */
+
+body {
+  background-color: var(--cream);
+  background-image: radial-gradient(
+    rgba(217, 56, 50, 0.07) 1px,
+    transparent 1px
+  );
+  background-size: 22px 22px;
+  color: var(--ink);
+  font-family: var(--font-montserrat), sans-serif;
+}
+
+.field {
+  flex: 1;
+  min-width: 0;
+  border-radius: 9999px;
+  background: var(--cream);
+  padding: 0.875rem 1.25rem;
+  font-size: 0.875rem;
+  color: var(--ink);
+  outline: none;
+}
+.field:focus {
+  box-shadow: 0 0 0 2px var(--gold-400);
+}
